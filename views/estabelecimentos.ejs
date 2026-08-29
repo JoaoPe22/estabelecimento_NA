@@ -1,0 +1,24 @@
+<form action="/estabelecimento" method="post">
+  <div>
+    <label for="nome">Nome</label>
+    <input id="nome" name="nome" type="text" required>
+  </div>
+  <div>
+    <label for="endereco">Endereco</label>
+    <input id="endereco" name="endereco" type="text" required>
+  </div>
+  <div>
+    <label for="mediaValor">Media de valor</label>
+    <input id="mediaValor" name="mediaValor" type="number" required>
+  </div>
+  <button type="submit">Cadastrar</button>
+</form>
+
+<ul>
+  <% for (let i = 0; i < estabelecimentos.length; i++) { %>
+    <li>
+    <h2>Título: <%= estabelecimentos[i].nome %></h2>
+    <p>Descrição: <%= estabelecimentos[i].endereco %></p>
+    </li>
+  <% } %>
+</ul>
